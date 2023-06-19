@@ -75,7 +75,7 @@ header {
   box-sizing: border-box; /* Include padding in the element's total width */
 
   /* Add media query to maintain width for small screen sizes */
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     width: 100%;
     left: 0;
     transform: none;
@@ -90,7 +90,7 @@ nav {
   max-width: 100%; /* Ensure navigation occupies the available width */
 
   /* Add media query to maintain center alignment for small screen sizes */
-  @media screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     justify-content: flex-start;
   }
 }
@@ -127,7 +127,7 @@ nav ul li a:hover {
 }
 
 /* Media Query for small screens */
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   nav ul {
     justify-content: flex-start;
   }
