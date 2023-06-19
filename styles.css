@@ -1,0 +1,834 @@
+/* General styles */
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial,  sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  color: #eeebeb;
+}
+
+  
+  a {
+    color: #ffffff;
+    font-size: large;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: rgb(51, 191, 216);
+  }
+  
+  .logo {
+    position: fixed;
+    display: flex;
+    top: 10px;
+    left: 10px;
+    align-items: center;
+    margin-right: 10px; /* Adjust margin as needed */
+    z-index: 999; /* Ensure the logo is above other elements */
+  }
+  
+  .logo img {
+    height: 55px; /* Adjust the height of the logo image */
+    width: auto;
+    border-radius: 40px;
+    
+  }
+ /* Adjustments for small screen sizes */
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  nav ul li:not(:nth-child(-n+5)) {
+    display: none;
+  }
+}
+
+
+  header {
+    position: relative; /* Ensure the header is a positioned container */
+  }
+  
+   
+/* Navigation */
+header {
+  background-color: rgba(63, 61, 61, 0.725);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin: 0 auto; /* Center the header horizontally */
+  z-index: 999;
+  border-radius: 20px;
+  border-style: double;
+  border-color: #14739c;
+  padding: 10px; /* Add padding to create space around the navigation */
+  box-sizing: border-box; /* Include padding in the element's total width */
+
+  /* Add media query to maintain width for small screen sizes */
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+  max-width: 100%; /* Ensure navigation occupies the available width */
+
+  /* Add media query to maintain center alignment for small screen sizes */
+  @media screen and (max-width: 600px) {
+    justify-content: flex-start;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px; /* Add gap between navigation items */
+  flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+}
+
+nav ul li {
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+  white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
+}
+
+nav ul li a {
+  padding: 8px;
+  color: white; /* Set the text color to white */
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
+}
+
+nav ul li a:hover {
+  background-color: rgba(10, 10, 10, 0.709); /* Change background color on hover */
+  color: rgb(30, 142, 162);
+  border-radius: 10px;
+  /* Additional styles for the hovered link */
+}
+
+/* Media Query for small screens */
+@media (max-width: 600px) {
+  nav ul {
+    justify-content: flex-start;
+  }
+}
+
+
+
+#home {
+  padding-top: 10px; /* Add padding to the top of the home section */
+}
+@media screen and (max-width: 600px) {
+  #home {
+    padding-top: 100px;
+  }
+}
+#home {
+  background-image: url('img/black7.avif'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0;
+}
+
+/* profile */
+.profile {
+  display: flex;
+  justify-content: flex-start; /* Align the profile contents to the left */
+  margin-top: 0px;
+  margin-bottom: 130px;
+  margin-left: 50px;
+  align-items: center;
+}
+
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border-style: groove;
+  border-color: #14739c;
+  margin: 20px auto 20px auto;
+}
+
+.image-box::before {
+  content: "Hello";
+  font-size: 80px; /* Increase the font size to 80px */
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: left 0.5s ease-in-out;
+}
+
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  object-fit: cover;
+  margin-right: 60px;
+  transition: filter 0.5s ease-in-out;
+}
+
+.image-box:hover img {
+  filter: grayscale(80%);
+}
+
+.image-box:hover::before {
+  left: 0;
+}
+
+
+
+/* Media Query for big screens */
+@media (min-width: 350px) {
+  .image-box {
+    width: 380px;
+    height: 450px;
+    /* Additional styles for big screens */
+  }
+
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    /* Additional styles for big screens */
+  }
+}
+
+
+/* Media Query for small screens */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-box {
+    margin-top: 40px;
+    width: 300px;
+    height: 350px;
+     /* Add gap between profile and image */
+  }
+}
+
+/* Home section */
+#home .social-icons {
+  display: flex;
+  justify-content: flex-start; /* Align the social icons to the left */
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+
+/* about */
+#about {
+  background-image: url('img/world.webp'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0;
+}
+
+#about h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#about > p {
+  background-color: rgba(0, 0, 0, 0.5); /* Replace with your desired background color */
+  color: #ffffff; /* Replace with your desired text color */
+}
+
+
+#about p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+.about-content {
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Center the content vertically */
+  gap: 10px; /* Add a gap of 20px between the text and social icons */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Add a gap of 10px between the social icons */
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Set the desired size of the social icons */
+  height: 40px; /* Set the desired size of the social icons */
+  border-radius: 50%; /* Make the social icons circular */
+  background-color: #ffffff; /* Set the background color of the social icons */
+}
+
+.social-icons a:hover {
+  background-color: #27afca80; /* Set the background color of the social icons on hover */
+}
+
+.social-icons a i {
+  color: #000000; /* Set the color of the social icon */
+  font-size: 20px; /* Set the font size of the social icon */
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Center the content vertically */
+  gap: 10px; /* Add a gap of 20px between the text and social icons */
+}
+
+.background p,
+.education p {
+  padding: 10px;
+  gap: 10px;
+  margin-bottom: 10px; /* Add margin-bottom to create space between paragraphs */
+  line-height: 2.5; /* Adjust the line-height value as desired */
+}
+
+
+
+.programming-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Center the content vertically */
+  gap: 8px; /* Add a gap of 20px between the text and social icons */
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar {
+  position: relative;
+  width: 200px; /* Adjust the width of the progress bar */
+  height: 20px; /* Adjust the height of the progress bar */
+  background-color: rgba(117, 117, 117, 0.574);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #27afca; /* Set the color of the filled progress */
+  border-radius: 10px;
+  animation: fill-progress 1s ease-in-out forwards;
+  width: 0; /* Initial width of the progress bar */
+}
+
+@keyframes fill-progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+.skill:hover .progress {
+  animation: fill-progress-hover 1s ease-in-out forwards;
+}
+
+@keyframes fill-progress-hover {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+.percentage {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.about-content > div:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.about-content > div {
+  background-color: rgba(21, 22, 23, 0.922);
+  backdrop-filter: blur(10px);
+  box-shadow: #2678b6;
+  padding: 20px;
+  border-radius: 20px;
+  border-style: outset;
+  border-color: #1f7a96;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 40px;
+  height: 500px; /* Adjust the height as desired */
+  width: 500px; /* Adjust the width as desired */
+}
+
+.about-content > .programming-skills{
+  height: auto;
+  width: auto;
+}
+.about-content > div:hover {
+  transform: scale(1.05);
+}
+/* Adjustments for small screen sizes */
+@media screen and (max-width: 600px) {
+  .about-content {
+    width: 100%;
+  }
+}
+
+
+
+
+  /* skills */
+
+  #skills {
+  background-image: url('img/top-view-dark.avif'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0;
+}
+
+#skills h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  margin-top: 40px;
+  gap: 25px;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 120px;
+  align-items: center;
+  gap: 10px;
+}
+
+.professional-skills,
+.soft-skills {
+  width: 300px;
+  background-color: #131516a1;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  border-style: outset;
+  border-color: #1f7a96;
+  height: 300px; /* Adjust the height as desired */
+  width: 400px; /* Adjust the width as desired */
+  border-radius: 10px;
+  margin-bottom: 80px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center; /* Center align the headings */
+}
+
+.professional-skills:hover,
+.soft-skills:hover {
+  transform: scale(1.05);
+}
+
+.professional-skills h3,
+.soft-skills h3 {
+  margin-top: 0;
+  gap: 10px;
+}
+
+.professional-skills ul,
+.soft-skills ul {
+  list-style-type: none;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Align the list items on the left side */
+}
+
+.professional-skills ul li,
+.soft-skills ul li {
+  margin-bottom: 10px; /* Remove the vertical gap between list items */
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-skills li {
+  opacity: 0;
+  transform: translateX(-20px);
+  position: relative; /* Add position relative */
+  transition: color 0.3s; /* Add transition for color change */
+}
+
+.animate-skills li::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Adjust the position of the underline */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s; /* Add transition for background-color change */
+}
+
+.animate-skills li:hover {
+  color: #2697b9; /* Change text color on hover */
+}
+
+.animate-skills li:hover::after {
+  background-color: #1f7a96; /* Change underline color on hover */
+}
+
+
+.skills-content.animate .animate-skills li {
+  animation: slideInLeft 0.5s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+/* Adjustments for small screen sizes */
+@media screen and (max-width: 600px) {
+  .skills-item {
+    width: 100%;
+  }
+}
+  
+  
+  
+  
+
+  
+ /* Projects section */
+#projects {
+  background-image: url('img/black1.webp'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 80px 0;
+}
+
+#projects h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  margin-top: 40px;
+  gap: 25px;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.project-category {
+  
+  margin-bottom: 80px;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.project-description a i.fab.fa-github {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+.project-image {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: max-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease-in-out;
+  z-index: 0;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+
+.project-image-hover {
+  transform-origin: center;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.project-image:hover img {
+  transform: scale(1.2);
+}
+
+.project-description {
+  background-color: #00000092;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.project-description h3{
+  padding: 10px;
+}
+
+.project-description p{
+  padding: 10px;
+}
+/* Adjustments for small screen sizes */
+@media screen and (max-width: 600px) {
+  .projects-content {
+    width: 100%;
+  }
+}
+/* Articles section */
+
+
+#articles {
+  background-image: url('img/black3.jpg'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+#articles h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  margin-top: 40px;
+  gap: 25px;
+}
+
+.articles-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Display in a single column */
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: max-content;
+  background-color: rgba(0, 0, 0, 0.519);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+  z-index: 0;
+}
+
+.article-card a i.fab.fa-medium {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+.article-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+
+.article-card:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.article-card:hover img {
+  transform: scale(1.2);
+}
+/* Adjustments for small screen sizes */
+@media screen and (max-width: 600px) {
+  .articles-content {
+    width: 100%;
+  }
+}
+  
+
+
+  
+/* Footer */
+footer {
+  background-image: url('img/footer1.jpg');
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+  
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
+    .about-content,
+    .skills-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .carousel {
+      flex-direction: column;
+    }
+  
+    .project-card,
+    .article-card {
+      width: 100%;
+    }
+  }
+  
+  /* Transition Animation */
+  body {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  header,
+  section,
+  footer {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  nav ul li a {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  @media screen and (max-width: 600px) {
+    .about-content > div,
+    .skills-content > div,
+    .articles-content,
+    .projects-content {
+      width: 100%; /* Set the width to 100% for small screens */
+    }
+  
+    .about-content > div {
+      height: 400px; /* Allow the height to adjust based on the content */
+      width: 350px;
+    }
+  
+    .carousel {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .skills-content {
+      display: flex;
+      flex-direction: column; /* Display skills in a column */
+      align-items: center; /* Center align the skills */
+      gap: 30px;
+      margin: 0 auto; /* Center the skills section horizontally */
+      max-width: 350px; /* Limit the maximum width of the skills section */
+    }
+  
+
+  
+    .project-card,
+    .article-card {
+      width: 350px;
+    }
+  }
+  
+  
