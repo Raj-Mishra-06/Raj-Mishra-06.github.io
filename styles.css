@@ -448,14 +448,12 @@ nav ul li a:hover {
 
 
 
-  /* skills */
-
-  #skills {
+#skills {
   background-image: url('img/top-view-dark.avif'); /* Replace with the path to your background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 #skills h2 {
@@ -471,25 +469,23 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 80px;
-  margin-bottom: 120px;
+  margin-top: 40px;
+  margin-bottom: 80px;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
 }
 
 .professional-skills,
 .soft-skills {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   background-color: #131516a1;
   color: #ffffff;
   padding: 20px;
   border-radius: 20px;
   border-style: outset;
   border-color: #1f7a96;
-  height: 300px; /* Adjust the height as desired */
-  width: 400px; /* Adjust the width as desired */
-  border-radius: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   transition: transform 0.3s ease-in-out;
   text-align: center; /* Center align the headings */
 }
@@ -556,17 +552,30 @@ nav ul li a:hover {
   background-color: #1f7a96; /* Change underline color on hover */
 }
 
-
 .skills-content.animate .animate-skills li {
   animation: slideInLeft 0.5s ease-in-out forwards;
   animation-delay: 0.2s;
 }
+
 /* Adjustments for small screen sizes */
 @media screen and (max-width: 600px) {
-  .skills-item {
-    width: 100%;
+  #skills h2 {
+    font-size: large;
+  }
+
+  .skills-content {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .professional-skills,
+  .soft-skills {
+    padding: 15px;
+    margin-bottom: 40px;
   }
 }
+
   
   
   
