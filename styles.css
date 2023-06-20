@@ -66,6 +66,7 @@ header {
   left: 0;
   right: 0;
   width: 50%;
+  height: 55px; /* Set a fixed height for the navigation panel */
   margin: 0 auto; /* Center the header horizontally */
   z-index: 999;
   border-radius: 20px;
@@ -73,13 +74,6 @@ header {
   border-color: #14739c;
   padding: 10px; /* Add padding to create space around the navigation */
   box-sizing: border-box; /* Include padding in the element's total width */
-
-  /* Add media query to maintain width for small screen sizes */
-  @media only screen and (max-width: 1100px) {
-    width: 100%;
-    left: 0;
-    transform: none;
-  }
 }
 
 nav {
@@ -88,38 +82,40 @@ nav {
   align-items: center;
   flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
   max-width: 100%; /* Ensure navigation occupies the available width */
-
-  /* Add media query to maintain center alignment for small screen sizes */
-  @media screen and (max-width: 800px) {
-    justify-content: flex-start;
-  }
 }
 
-nav ul {
+.menu-icon {
+  display: none; /* Hide the menu icon by default */
+}
+
+
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
+  padding: 5px;
   justify-content: center;
   align-items: center;
   gap: 4px; /* Add gap between navigation items */
   flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
 }
 
-nav ul li {
+.menu li {
   margin: 0 10px;
   transition: transform 0.3s ease-in-out;
   white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
+  position: relative;
 }
 
-nav ul li a {
+.menu a {
   padding: 8px;
   color: white; /* Set the text color to white */
   transition: color 0.3s ease-in-out;
   white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
 }
 
-nav ul li a:hover {
+.menu a:hover {
   background-color: rgba(10, 10, 10, 0.709); /* Change background color on hover */
   color: rgb(30, 142, 162);
   border-radius: 10px;
@@ -128,10 +124,52 @@ nav ul li a:hover {
 
 /* Media Query for small screens */
 @media (max-width: 763px) {
-  nav ul {
-    justify-content: flex-start;
+  .menu-icon {
+    display: block; /* Show the menu icon */
+    cursor: pointer;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+  }
+
+  .menu-icon.open {
+    transform: translateY(-50%) rotate(180deg); /* Rotate the icon when menu is open */
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: #14739c;
+    background-color: rgba(6, 6, 6, 0.834);
+    padding: 10px;
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
   }
 }
+
+
+
 
 
 
