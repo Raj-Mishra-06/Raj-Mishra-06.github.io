@@ -376,7 +376,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Center the content vertically */
-  gap: 5px; /* Add a gap of 10px between the text and social icons */
+  gap: 15px; /* Add a gap of 10px between the text and social icons */
 }
 
 .certifications{
@@ -452,9 +452,9 @@ nav {
 
 .background p,
 .education p {
-  padding: 5px;
+  padding: 10px;
   gap: 10px;
-  margin-bottom: 20px; /* Add margin-bottom to create space between paragraphs */
+  margin-bottom: 30px; /* Add margin-bottom to create space between paragraphs */
   line-height: 2.5; /* Adjust the line-height value as desired */
 }
 
