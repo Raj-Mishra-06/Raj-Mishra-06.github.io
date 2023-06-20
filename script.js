@@ -8,6 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.classList.toggle('open'); // Add class to animate the menu button
   });
 
+  const skillCards = document.querySelectorAll('.skill-card');
+
+  function checkSlide() {
+    skillCards.forEach(skillCard => {
+      const slideInAt = (window.scrollY + window.innerHeight) - skillCard.offsetHeight / 2;
+      const skillCardBottom = skillCard.offsetTop + skillCard.offsetHeight;
+      const isHalfShown = slideInAt > skillCard.offsetTop;
+      const isNotScrolledPast = window.scrollY < skillCardBottom;
+      if (isHalfShown && isNotScrolledPast) {
+        skillCard.classList.add('slide-in');
+      } else {
+        skillCard.classList.remove('slide-in');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkSlide);
   // Add event listener to each navigation link
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach((link) => {
