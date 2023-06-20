@@ -127,7 +127,7 @@ nav {
 }
 
 /* Media Query for small screens */
-@media (max-width: 763px) {
+@media (max-width: 1050px) {
   .menu-icon {
     display: block; /* Show the menu icon */
     cursor: pointer;
@@ -172,6 +172,20 @@ nav {
   }
 }
 
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
+  #home,
+  #about,
+  #skills,
+  #projects,
+  #articles,
+  #footer {
+    padding-top: 50px;
+    /* Adjust other properties as needed */
+  }
+}
 
 
 
@@ -180,15 +194,7 @@ nav {
 #home {
   padding-top: 10px; /* Add padding to the top of the home section */
 }
-/* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
-  /* Adjustments for small screens */
-  /* For example: */
-  #home {
-    padding-top: 50px;
-    /* Adjust other properties as needed */
-  }
-}
+
 #home {
   background-image: url('img/black7.avif'); /* Replace with the path to your background image */
   background-size: cover;
@@ -307,15 +313,6 @@ nav {
   background-position: center;
   background-attachment: fixed;
   padding: 100px 0;
-}
-/* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
-  /* Adjustments for small screens */
-  /* For example: */
-  #about {
-    padding-top: 50px;
-    /* Adjust other properties as needed */
-  }
 }
 
 #about h2 {
@@ -566,7 +563,7 @@ nav {
   transition: transform 0.3s ease-in-out;
   margin-bottom: 40px;
   height: 500px; /* Adjust the height as desired */
-  width: 500px; /* Adjust the width as desired */
+  width: 350px; /* Adjust the width as desired */
 }
 
 .about-content > .programming-skills {
@@ -600,15 +597,6 @@ nav {
   background-position: center;
   background-attachment: fixed;
   padding: 100px 0;
-}
-/* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
-  /* Adjustments for small screens */
-  /* For example: */
-  #skills {
-    padding-top: 50px;
-    /* Adjust other properties as needed */
-  }
 }
 
 #skills h2 {
@@ -713,15 +701,7 @@ nav {
   text-align: center;
   padding: 100px 0;
 }
-/* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
-  /* Adjustments for small screens */
-  /* For example: */
-  #projects {
-    padding-top: 50px;
-    /* Adjust other properties as needed */
-  }
-}
+
 
 #projects h2 {
   display: flex;
@@ -828,15 +808,6 @@ nav {
   justify-content: center; /* Center vertically */
 }
 
-/* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
-  /* Adjustments for small screens */
-  /* For example: */
-  #articles {
-    padding-top: 50px;
-    /* Adjust other properties as needed */
-  }
-}
 
 #articles h2 {
   display: flex;
@@ -897,17 +868,7 @@ nav {
 .article-card:hover img {
   transform: scale(1.2);
 }
-/* Adjustments for small screen sizes */
-@media screen and (max-width: 1050px) {
-  .articles-content {
-    margin-left: 40px;
-    margin-right: 40px;
-    width: 50%;
-  }
-}
   
-
-
   
 /* Footer */
 footer {
@@ -925,18 +886,10 @@ footer {
   align-items: center;
   gap: 10px;
 }
-/* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
-  /* Adjustments for small screens */
-  /* For example: */
-  #footer {
-    padding-top: 50px;
-    /* Adjust other properties as needed */
-  }
-}
+
   
   /* Media Queries */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 500px) {
     .about-content,
     .skills-content {
       grid-template-columns: 1fr;
@@ -992,7 +945,6 @@ footer {
       max-width: 350px; /* Limit the maximum width of the skills section */
     }
   
-    .project-card,
     .article-card {
       width: 350px;
     }
