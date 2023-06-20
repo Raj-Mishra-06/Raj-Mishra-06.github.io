@@ -796,68 +796,58 @@ nav {
 
 
 #articles {
-  background-image: url('img/black3.jpg'); /* Replace with the path to your background image */
+  background-image: url('img/black3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   text-align: center;
-  padding: 100px 0;
+  padding: 80px 0; /* Adjust the top and bottom padding as desired */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
+  align-items: center;
+  justify-content: center;
 }
 
-
 #articles h2 {
-  display: flex;
-  justify-content: center;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  align-items: center;
-  font-size: 60px;
+  font-size: 48px; /* Adjust the font size as desired */
   margin-top: 15px;
-  gap: 25px;
+  gap: 15px; /* Decrease the gap between elements as desired */
 }
 
 .articles-content {
   display: grid;
-  grid-template-columns: 1fr; /* Display in a single column */
-  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the column size as desired */
+  grid-gap: 30px; /* Adjust the gap between cards as desired */
   justify-items: center;
   align-items: center;
-  margin-top: 80px;
-  margin-bottom: 120px;
+  margin-top: 60px; /* Adjust the top margin as desired */
+  margin-bottom: 80px; /* Adjust the bottom margin as desired */
 }
 
 .article-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  width: 400px;
-  height: max-content;
+  width: 100%;
+  max-width: 400px;
   background-color: rgba(0, 0, 0, 0.519);
   backdrop-filter: blur(2px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  gap: 40px;
+  gap: 20px; /* Decrease the gap between elements as desired */
   text-align: center;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out; /* Decrease the transition duration as desired */
   z-index: 0;
 }
 
 .article-card a i.fab.fa-medium {
-  font-size: 24px; /* Adjust the font size as desired */
+  font-size: 20px; /* Adjust the font size as desired */
 }
 
 .article-card img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out; /* Decrease the transition duration as desired */
 }
 
 .article-card:hover {
@@ -868,6 +858,25 @@ nav {
 .article-card:hover img {
   transform: scale(1.2);
 }
+
+@media screen and (max-width: 767px) {
+  #articles h2 {
+    font-size: 36px; /* Adjust the font size as desired */
+  }
+
+  .articles-content {
+    grid-template-columns: 1fr; /* Display in a single column */
+    grid-gap: 20px; /* Adjust the gap between cards as desired */
+    margin-top: 40px; /* Adjust the top margin as desired */
+    margin-bottom: 60px; /* Adjust the bottom margin as desired */
+  }
+
+  .article-card {
+    max-width: 100%; /* Set the maximum width to 100% */
+    width: auto;
+  }
+}
+
   
   
 /* Footer */
