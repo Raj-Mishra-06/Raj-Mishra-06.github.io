@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.menu');
+  const nav = document.querySelector('nav');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    menuToggle.classList.toggle('open'); // Add class to animate the menu button
+  });
+
+  // Add event listener to each navigation link
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('show');
+      menuToggle.classList.remove('open');
+    });
+  });
+
   // Initialize ScrollMagic controller
   const controller = new ScrollMagic.Controller();
 
@@ -39,12 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
       const target = document.querySelector(event.target.getAttribute('href'));
       smoothScroll(target);
+      menu.classList.remove('show'); // Hide the menu after smooth scrolling
+      menuToggle.classList.remove('open'); // Reset the menu button animation
     }
 
     window.addEventListener('scroll', checkScroll);
 
     // Attach click event listener to navigation links
-    const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach((link) => {
       link.addEventListener('click', handleNavClick);
     });
