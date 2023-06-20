@@ -346,6 +346,9 @@ nav {
   height: auto;
 }
 
+.about-content > .education{
+  height: auto;
+}
 
 .social-icons {
   display: flex;
