@@ -127,7 +127,7 @@ nav {
 }
 
 /* Media Query for small screens */
-@media (max-width: 1050px) {
+@media (max-width: 763px) {
   .menu-icon {
     display: block; /* Show the menu icon */
     cursor: pointer;
@@ -180,10 +180,13 @@ nav {
 #home {
   padding-top: 10px; /* Add padding to the top of the home section */
 }
-@media screen and (max-width: 1050px) {
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
   #home {
-    min-width: 500px;
-    padding-top: 100px;
+    padding-top: 50px;
+    /* Adjust other properties as needed */
   }
 }
 #home {
@@ -305,10 +308,13 @@ nav {
   background-attachment: fixed;
   padding: 100px 0;
 }
-@media screen and (max-width: 1050px) {
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
   #about {
-    min-width: 500px;
-    padding-top: 100px;
+    padding-top: 50px;
+    /* Adjust other properties as needed */
   }
 }
 
@@ -595,10 +601,13 @@ nav {
   background-attachment: fixed;
   padding: 100px 0;
 }
-@media screen and (max-width: 1050px) {
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
   #skills {
-    min-width: 500px;
-    padding-top: 100px;
+    padding-top: 50px;
+    /* Adjust other properties as needed */
   }
 }
 
@@ -704,10 +713,13 @@ nav {
   text-align: center;
   padding: 100px 0;
 }
-@media screen and (max-width: 1050px) {
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
   #projects {
-    min-width: 500px;
-    padding-top: 100px;
+    padding-top: 50px;
+    /* Adjust other properties as needed */
   }
 }
 
@@ -816,10 +828,13 @@ nav {
   justify-content: center; /* Center vertically */
 }
 
-@media screen and (max-width: 1050px) {
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
   #articles {
-    min-width: 500px;
-    padding-top: 100px;
+    padding-top: 50px;
+    /* Adjust other properties as needed */
   }
 }
 
@@ -910,11 +925,13 @@ footer {
   align-items: center;
   gap: 10px;
 }
-@media screen and (max-width: 1050px) {
-  footer {
-    justify-content: center;
-    min-width: 500px;
-    padding-top: 20px;
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Adjustments for small screens */
+  /* For example: */
+  #footer {
+    padding-top: 50px;
+    /* Adjust other properties as needed */
   }
 }
   
