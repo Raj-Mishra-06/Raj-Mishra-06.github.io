@@ -59,7 +59,7 @@ body {
    
 /* Navigation */
 header {
-  background-color: rgba(63, 61, 61, 0.725);
+  background-color: rgba(113, 112, 112, 0.591);
   backdrop-filter: blur(2px);
   position: fixed;
   top: 10px;
@@ -305,7 +305,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 #about > p {
@@ -491,7 +491,7 @@ nav {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 #skills h2 {
@@ -499,7 +499,7 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: xx-large;
-  margin-top: 40px;
+  margin-top: 15px;
   gap: 25px;
 }
 
@@ -627,7 +627,7 @@ nav {
   background-position: center;
   background-attachment: fixed;
   text-align: center;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 #projects h2 {
@@ -635,7 +635,7 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: xx-large;
-  margin-top: 40px;
+  margin-top: 15px;
   gap: 25px;
 }
 
@@ -721,7 +721,7 @@ nav {
   background-position: center;
   background-attachment: fixed;
   text-align: center;
-  padding: 80px 0;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
@@ -733,7 +733,7 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: xx-large;
-  margin-top: 40px;
+  margin-top: 15px;
   gap: 25px;
 }
 
