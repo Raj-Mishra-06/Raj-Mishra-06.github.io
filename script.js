@@ -90,3 +90,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
   animateSkills();
 });
+
+// Get all slideshow containers
+const slideshows = document.querySelectorAll('.slideshow');
+
+// Loop through each slideshow container
+slideshows.forEach((slideshow) => {
+  const images = slideshow.getElementsByTagName('img');
+  let currentSlide = 0;
+  
+  // Function to display the current slide
+  const showSlide = () => {
+    // Hide all images
+    for (let i = 0; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+    // Display the current slide
+    images[currentSlide].style.display = 'block';
+  };
+  
+  // Function to switch to the next slide
+  const nextSlide = () => {
+    currentSlide++;
+    if (currentSlide >= images.length) {
+      currentSlide = 0;
+    }
+    showSlide();
+  };
+  
+  // Show the first slide
+  showSlide();
+  
+  // Automatically switch to the next slide every 3 seconds
+  setInterval(nextSlide, 3000);
+});
+
+// Update the visit count
+function updateVisitCount() {
+  if (localStorage.getItem("visitCount")) {
+    let count = parseInt(localStorage.getItem("visitCount"));
+    count += 1;
+    localStorage.setItem("visitCount", count);
+    document.getElementById("visit-count").textContent = count;
+  } else {
+    localStorage.setItem("visitCount", 1);
+    document.getElementById("visit-count").textContent = 1;
+  }
+}
+
+// Run the function on page load
+updateVisitCount();
