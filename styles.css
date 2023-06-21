@@ -17,33 +17,36 @@ body {
     min-width: fit-content;
   }
 } 
-  a {
-    color: #ffffff;
-    font-size: large;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+
+.logo {
+  position: fixed;
+  display: flex;
+  top: 10px;
+  left: 10px;
+  align-items: center;
+  margin-right: 10px; /* Adjust margin as needed */
+  z-index: 999; /* Ensure the logo is above other elements */
+  animation: rotate 4s infinite linear; /* Add animation properties */
+}
+
+.logo img {
+  height: 55px; /* Adjust the height of the logo image */
+  width: auto;
+  border-radius: 40px;
+}
+
+/* Define the rotating animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
   }
-  
-  a:hover {
-    color: rgb(51, 191, 216);
+  100% {
+    transform: rotate(360deg); /* End rotation at 360 degrees (full rotation) */
   }
-  
-  .logo {
-    position: fixed;
-    display: flex;
-    top: 10px;
-    left: 10px;
-    align-items: center;
-    margin-right: 10px; /* Adjust margin as needed */
-    z-index: 999; /* Ensure the logo is above other elements */
-  }
-  
-  .logo img {
-    height: 55px; /* Adjust the height of the logo image */
-    width: auto;
-    border-radius: 40px;
-    
-  }
+}
+
+
+
  /* Adjustments for small screen sizes */
 @media screen and (max-width: 700px) {
   .logo {
@@ -114,9 +117,12 @@ nav {
 
 .menu a {
   padding: 8px;
+  font-size: large;
+  font-weight: bold;
   color: white; /* Set the text color to white */
   transition: color 0.3s ease-in-out;
   white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
+  text-decoration: none;
 }
 
 .menu a:hover {
@@ -127,7 +133,7 @@ nav {
 }
 
 /* Media Query for small screens */
-@media (max-width: 1050px) {
+@media (max-width: 1090px) {
   .menu-icon {
     display: block; /* Show the menu icon */
     cursor: pointer;
@@ -173,7 +179,7 @@ nav {
 }
 
 /* Styles for small screens (up to 767px) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   /* Adjustments for small screens */
   /* For example: */
   #home,
@@ -196,7 +202,7 @@ nav {
 }
 
 #home {
-  background-image: url('img/black7.avif'); /* Replace with the path to your background image */
+  background-image: url('img/home1.webp'); /* Replace with the path to your background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -212,7 +218,17 @@ nav {
   margin-left: 50px;
   align-items: center;
 }
+.profile a {
+  color: #ffffff;
+  font-size: x-large;
+  padding: 3px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
 
+.profile a:hover {
+  color: rgb(51, 191, 216);
+}
 
 .image-box {
   position: relative;
@@ -295,14 +311,7 @@ nav {
   }
 }
 
-/* Home section */
-#home .social-icons {
-  display: flex;
-  justify-content: flex-start; /* Align the social icons to the left */
-  align-items: center;
-  flex-direction: row;
-  gap: 10px;
-}
+
 
 
 
@@ -325,6 +334,7 @@ nav {
 }
 
 #about > p {
+  width: fit-content;
   background-color: rgba(0, 0, 0, 0.5); /* Replace with your desired background color */
   color: #ffffff; /* Replace with your desired text color */
 }
@@ -334,11 +344,22 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  margin-bottom: 50px;
+  padding: 4px;
+  margin-bottom: 80px;
   text-align: center;
 }
 
+#about .skill > p {
+  font-weight: bold;
+  font-family: cursive;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+}
+
+#about .skill > .progress-bar {
+  margin-bottom: 25px;
+
+}
 .about-content {
   display: flex;
   color: #ffffff;
@@ -354,24 +375,26 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Center the content vertically */
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   gap: 5px; /* Add a gap of 10px between the text and social icons */
 }
 
 .about-content > .background{
-  height: auto;
+  width: 70%;
+  height: fit-content;
 }
 
 .about-content > .education{
-  height: auto;
+  width: 70%;
+  height: fit-content;
 }
 
-.social-icons {
+.about-content .social-icons {
   display: flex;
   gap: 10px; /* Add a gap of 10px between the social icons */
 }
 
-.social-icons a {
+.about-content .social-icons a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -379,13 +402,14 @@ nav {
   height: 40px; /* Set the desired size of the social icons */
   border-radius: 50%; /* Make the social icons circular */
   background-color: #ffffff; /* Set the background color of the social icons */
+  text-decoration: none;
 }
 
-.social-icons a:hover {
-  background-color: #27afca80; /* Set the background color of the social icons on hover */
+.about-content .social-icons a:hover {
+  background-color: #1ea4ad; /* Set the background color of the social icons on hover */
 }
 
-.social-icons a i {
+.about-content .social-icons a i {
   color: #000000; /* Set the color of the social icon */
   font-size: 20px; /* Set the font size of the social icon */
 }
@@ -395,7 +419,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Center the content vertically */
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   gap: 15px; /* Add a gap of 10px between the text and social icons */
 }
 
@@ -448,6 +472,7 @@ nav {
   top: 10px;
   right: 10px;
   background-color: #ffffff;
+  text-decoration: none;
   color: #000000;
   width: 40px;
   height: 40px;
@@ -455,6 +480,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.drive-link:hover{
+  background-color: aqua;
 }
 
 .certification-details {
@@ -488,14 +517,15 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* Center the content vertically */
-  gap: 8px; /* Add a gap of 8px between the text and social icons */
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2px 0 2px 0; /* Adjust the margin top, bottom, left, and right as desired */
 }
+
 
 .progress-bar {
   position: relative;
@@ -550,25 +580,26 @@ nav {
 }
 
 .about-content > div:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .about-content > div {
   background-color: transparent;
   backdrop-filter: blur(5px);
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   border-style: outset;
+  box-shadow: rgba(255, 255, 255, 0.1);
   border-color: #1f7a96;
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   height: 500px; /* Adjust the height as desired */
-  width: 350px; /* Adjust the width as desired */
+  width: 430px; /* Adjust the width as desired */
 }
 
 .about-content > .programming-skills {
   height: auto;
-  width: auto;
+  width: 50%;
 }
 
 .about-content > .certifications {
@@ -685,23 +716,15 @@ nav {
 }
 
 
-
-  
-  
-  
-  
-
-  
- /* Projects section */
+/* Projects section */
 #projects {
-  background-image: url('img/black1.webp'); /* Replace with the path to your background image */
+  background-image: url('img/projects.jpg'); /* Replace with the path to your background image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   text-align: center;
   padding: 100px 0;
 }
-
 
 #projects h2 {
   display: flex;
@@ -714,7 +737,7 @@ nav {
   gap: 25px;
 }
 
-.projects-content h3{
+.projects-content h3 {
   font-family: 'Times New Roman', Times, serif;
   font-size: xx-large;
 }
@@ -728,7 +751,6 @@ nav {
 }
 
 .project-category {
-  
   margin-bottom: 80px;
 }
 
@@ -740,22 +762,28 @@ nav {
 }
 
 .project-description a i.fab.fa-github {
-  font-size: 24px; /* Adjust the font size as desired */
+  font-size: 30px; /* Adjust the font size as desired */
+  color: aliceblue;
+  border-radius: 50%; /* Make the icon circular */
 }
+
+.project-description a i.fab.fa-github:hover {
+  color: #27afca;
+}
+
 .project-image {
   position: relative;
   overflow: hidden;
-  width: 400px;
-  height: max-content;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 1s ease-in-out;
+  transition: transform 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   z-index: 0;
 }
 
+.slideshow > .project-image-hover{
+  height: 442px;
+  width: auto;
+}
 .project-image img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
   transition: transform 1s ease-in-out;
 }
 
@@ -772,6 +800,8 @@ nav {
   transform: scale(1.2);
 }
 
+
+
 .project-description {
   background-color: #00000092;
   padding: 40px;
@@ -779,24 +809,30 @@ nav {
   margin-bottom: 50px;
 }
 
-.project-description h3{
+.project-description h3 {
   padding: 10px;
 }
 
-.project-description p{
+.project-description p {
   padding: 10px;
 }
+
 /* Adjustments for small screen sizes */
 @media screen and (max-width: 763px) {
   .projects-content {
-    width: 100%;
+    width: contain;
+  }
+  .slideshow > .project-image-hover{
+    height: fit-content;
+    width: 350px;
   }
 }
-/* Articles section */
+
+
 
 
 #articles {
-  background-image: url('img/black3.jpg');
+  background-image: url('img/black1.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -825,6 +861,18 @@ nav {
   margin-top: 60px; /* Adjust the top margin as desired */
   margin-bottom: 80px; /* Adjust the bottom margin as desired */
 }
+
+.article-description a i.fab.fa-medium {
+  font-size: x-large;
+  border-radius: 30px;
+  color: #ffffff; /* Set the default color of the medium icon */
+  transition: color 0.3s ease-in-out; /* Add a smooth transition for the color change */
+}
+
+.article-description a i.fab.fa-medium:hover {
+  color: #27afca; /* Set the color of the medium icon on hover */
+}
+
 
 .article-card {
   width: 100%;
@@ -878,8 +926,6 @@ nav {
 }
 
   
-  
-/* Footer */
 footer {
   background-image: url('img/footer1.jpg');
   background-size: contain;
@@ -889,12 +935,59 @@ footer {
   padding: 20px;
 }
 
+.footer-logo {
+  height: 70px; /* Adjust the height as desired */
+  backdrop-filter: blur(10px);
+  width: auto;
+}
+
+.contact-details h3 {
+  margin-top: 0;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
 .footer-social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
+
+.footer-social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5); /* Set the background color of the social icons */
+  text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+  background-color: #27afca; /* Set the background color of the social icons on hover */
+}
+
+.footer-social-icons a i {
+  color: #000000; /* Set the color of the social icon */
+  font-size: 20px; /* Set the font size of the social icon */
+}
+
+.footer-social-icons a:hover i {
+  color: #ffffff; /* Set the color of the social icon on hover */
+}
+
+.visit-counter {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: #ffffff;
+}
+
+
 
   
   /* Media Queries */
