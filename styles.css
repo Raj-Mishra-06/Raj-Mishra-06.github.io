@@ -26,7 +26,6 @@ body {
   align-items: center;
   margin-right: 10px; /* Adjust margin as needed */
   z-index: 999; /* Ensure the logo is above other elements */
-  animation: rotate 4s infinite linear; /* Add animation properties */
 }
 
 .logo img {
@@ -34,17 +33,6 @@ body {
   width: auto;
   border-radius: 40px;
 }
-
-/* Define the rotating animation */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg); /* Start rotation from 0 degrees */
-  }
-  100% {
-    transform: rotate(360deg); /* End rotation at 360 degrees (full rotation) */
-  }
-}
-
 
 
  /* Adjustments for small screen sizes */
@@ -66,7 +54,7 @@ body {
    
 /* Navigation */
 header {
-  background-color: rgba(113, 112, 112, 0.591);
+  background-color: rgba(0, 0, 0, 0.591);
   backdrop-filter: blur(2px);
   position: fixed;
   top: 10px;
@@ -136,6 +124,7 @@ nav {
 @media (max-width: 1090px) {
   .menu-icon {
     display: block; /* Show the menu icon */
+    color: #fff;
     cursor: pointer;
     font-size: 1.5em;
     background: none;
@@ -160,7 +149,7 @@ nav {
     border-radius: 10px;
     border-style: outset;
     border-color: #14739c;
-    background-color: rgba(6, 6, 6, 0.834);
+    background-color: rgba(0, 0, 0, 0.834);
     padding: 10px;
     display: none;
   }
@@ -193,7 +182,12 @@ nav {
   }
 }
 
-
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
@@ -206,6 +200,7 @@ nav {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: fit-content;
   padding: 100px 0;
 }
 
@@ -321,6 +316,7 @@ nav {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: fit-content;
   padding: 100px 0;
 }
 
@@ -437,11 +433,11 @@ nav {
   position: relative;
   width: 300px;
   height: 400px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #12121257;
+  color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.529);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -491,10 +487,12 @@ nav {
 }
 
 .certification-details h4 {
+  font-weight: bold;
   margin-top: 0;
 }
 
 .certification-details p {
+  font-family: cursive;
   margin-bottom: 0;
 }
 
@@ -589,17 +587,17 @@ nav {
   padding: 10px;
   border-radius: 20px;
   border-style: outset;
-  box-shadow: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(10, 97, 105, 0.932);
   border-color: #1f7a96;
   transition: transform 0.3s ease-in-out;
   margin-bottom: 5px;
   height: 500px; /* Adjust the height as desired */
-  width: 430px; /* Adjust the width as desired */
+  width: 470px; /* Adjust the width as desired */
 }
 
 .about-content > .programming-skills {
   height: auto;
-  width: 50%;
+  width: 60%;
 }
 
 .about-content > .certifications {
@@ -615,8 +613,8 @@ nav {
 /* Adjustments for small screen sizes */
 @media screen and (max-width: 763px) {
   .about-content {
-    margin-right: 40px;
-    width: 100%;
+    margin-right: auto;
+    width: auto;
   }
 }
 
@@ -628,7 +626,9 @@ nav {
   background-position: center;
   background-attachment: fixed;
   padding: 100px 0;
+  height: auto;
 }
+
 
 #skills h2 {
   display: flex;
@@ -650,6 +650,7 @@ nav {
 .skill-card {
   display: flex;
   background-color: #000000b9;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.424);
   align-items: center;
   gap: 10px;
   padding: 10px;
@@ -698,6 +699,10 @@ nav {
 
 /* Adjustments for small screen sizes */
 @media screen and (max-width: 763px) {
+
+  #skills {
+    height: auto;
+  }
   #skills h2 {
     font-size: 60px;
   }
@@ -756,10 +761,12 @@ nav {
 
 .carousel {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
+
+
 
 .project-description a i.fab.fa-github {
   font-size: 30px; /* Adjust the font size as desired */
@@ -775,14 +782,18 @@ nav {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  transition: transform 1s ease-in-out;
   z-index: 0;
 }
 
-.slideshow > .project-image-hover{
+.slideshow > .project-image-hover {
   height: 442px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
 }
+
 .project-image img {
   transition: transform 1s ease-in-out;
 }
@@ -810,23 +821,40 @@ nav {
 }
 
 .project-description h3 {
+  font-size: xx-large;
   padding: 10px;
 }
 
 .project-description p {
+  font-family: cursive;
+  font-size: large;
   padding: 10px;
 }
 
-/* Adjustments for small screen sizes */
 @media screen and (max-width: 763px) {
   .projects-content {
-    width: contain;
+    justify-content: center;
+    width: 100%;
   }
-  .slideshow > .project-image-hover{
-    height: fit-content;
+
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slideshow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .slideshow > .project-image-hover {
+    height: auto;
     width: 350px;
   }
 }
+
 
 
 
@@ -879,7 +907,7 @@ nav {
   max-width: 400px;
   background-color: rgba(0, 0, 0, 0.519);
   backdrop-filter: blur(2px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.418);
   padding: 20px;
   gap: 20px; /* Decrease the gap between elements as desired */
   text-align: center;
@@ -904,7 +932,7 @@ nav {
 }
 
 .article-card:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 767px) {
@@ -920,7 +948,7 @@ nav {
   }
 
   .article-card {
-    max-width: 100%; /* Set the maximum width to 100% */
+    margin-bottom: 20px;
     width: auto;
   }
 }
@@ -936,7 +964,9 @@ footer {
 }
 
 .footer-logo {
-  height: 70px; /* Adjust the height as desired */
+  height: 80px; /* Adjust the height as desired */
+  background-color: #00000077;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.509);
   backdrop-filter: blur(10px);
   width: auto;
 }
