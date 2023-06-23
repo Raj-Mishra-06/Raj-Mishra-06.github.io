@@ -122,7 +122,7 @@ slideshows.forEach((slideshow) => {
   showSlide();
   
   // Automatically switch to the next slide every 3 seconds
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 2000);
 });
 
 // Update the visit count
@@ -140,3 +140,40 @@ function updateVisitCount() {
 
 // Run the function on page load
 updateVisitCount();
+
+const parallaxSections = document.querySelectorAll(".parallax");
+const navigationLinks = document.querySelectorAll("nav ul li a");
+
+// Add event listener to each navigation link
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    const target = this.getAttribute("href");
+    const targetSection = document.querySelector(target);
+    const targetOffset = targetSection.offsetTop;
+
+    window.scrollTo({
+      top: targetOffset,
+      behavior: "smooth"
+    });
+  });
+});
+
+// Add parallax effect to sections
+parallaxSections.forEach(section => {
+  window.addEventListener("scroll", function() {
+    const scrollPosition = window.pageYOffset;
+    const sectionOffset = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      scrollPosition >= sectionOffset - sectionHeight &&
+      scrollPosition <= sectionOffset + sectionHeight
+    ) {
+      section.style.backgroundPositionY =
+        (scrollPosition - sectionOffset) / 2 + "px";
+    }
+  });
+});
+
+
