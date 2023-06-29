@@ -230,8 +230,9 @@ nav {
   overflow: hidden;
   border-radius: 10px;
   border-style: groove;
-  border-color: #14739c;
+  border-color: #ffffff;
   margin: 20px auto 20px auto;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.601);
 }
 
 .image-box::before {
@@ -318,7 +319,8 @@ nav {
   background-attachment: fixed;
   height: fit-content;
   padding: 100px 0;
-}
+  }
+  
 
 #about h2 {
   display: flex;
@@ -376,12 +378,12 @@ nav {
 }
 
 .about-content > .background{
-  width: 70%;
+  width: 55%;
   height: fit-content;
 }
 
 .about-content > .education{
-  width: 70%;
+  width: 60%;
   height: fit-content;
 }
 
@@ -414,9 +416,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Center the content vertically */
+  justify-content: flex-start;
   margin-bottom: 60px;
-  gap: 15px; /* Add a gap of 10px between the text and social icons */
+  
 }
 
 .certifications{
@@ -499,7 +501,7 @@ nav {
 
 .background p,
 .education p {
-  padding: 10px;
+  padding: 8px;
   gap: 10px;
   margin-bottom: 30px; /* Add margin-bottom to create space between paragraphs */
   line-height: 2.5; /* Adjust the line-height value as desired */
@@ -587,8 +589,8 @@ nav {
   padding: 10px;
   border-radius: 20px;
   border-style: outset;
-  box-shadow: 0 0 10px rgba(10, 97, 105, 0.932);
-  border-color: #1f7a96;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.932);
+  border-color: #fdfdfd;
   transition: transform 0.3s ease-in-out;
   margin-bottom: 5px;
   height: 500px; /* Adjust the height as desired */
@@ -597,7 +599,7 @@ nav {
 
 .about-content > .programming-skills {
   height: auto;
-  width: 60%;
+  width: 55%;
 }
 
 .about-content > .certifications {
@@ -613,8 +615,10 @@ nav {
 /* Adjustments for small screen sizes */
 @media screen and (max-width: 763px) {
   .about-content {
-    margin-right: auto;
-    width: auto;
+    justify-content: center;
+    margin: 0 auto;
+    width: 130%; /* Adjust the width as desired */
+    max-width: 100%; /* Limit the maximum width to prevent overflow */
   }
 }
 
@@ -903,8 +907,8 @@ nav {
 
 
 .article-card {
-  width: 100%;
-  max-width: 400px;
+  width: 30%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.519);
   backdrop-filter: blur(2px);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.418);
@@ -920,7 +924,7 @@ nav {
 }
 
 .article-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   object-fit: cover;
   transition: transform 0.5s ease-in-out; /* Decrease the transition duration as desired */
@@ -949,7 +953,8 @@ nav {
 
   .article-card {
     margin-bottom: 20px;
-    width: auto;
+    width: 55%;
+    height: auto;
   }
 }
 
@@ -965,7 +970,7 @@ footer {
 
 .footer-logo {
   height: 80px; /* Adjust the height as desired */
-  background-color: #00000077;
+  background-color: #000000;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.509);
   backdrop-filter: blur(10px);
   width: auto;
@@ -1010,12 +1015,7 @@ footer {
   color: #ffffff; /* Set the color of the social icon on hover */
 }
 
-.visit-counter {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  color: #ffffff;
-}
+
 
 
 
