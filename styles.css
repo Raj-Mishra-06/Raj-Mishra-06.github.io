@@ -617,7 +617,7 @@ nav {
   .about-content {
     justify-content: center;
     margin: 0 auto;
-    width: 130%; /* Adjust the width as desired */
+    width: auto; /* Adjust the width as desired */
     max-width: 100%; /* Limit the maximum width to prevent overflow */
   }
 }
