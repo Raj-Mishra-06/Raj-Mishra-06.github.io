@@ -54,7 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth',
     });
   }
-
+  
+  
+  
   function animateSkills() {
     const skillElements = document.querySelectorAll('.animate-skills li');
     const windowHeight = window.innerHeight;
@@ -125,18 +127,7 @@ slideshows.forEach((slideshow) => {
   setInterval(nextSlide, 2000);
 });
 
-// Update the visit count
-function updateVisitCount() {
-  if (localStorage.getItem("visitCount")) {
-    let count = parseInt(localStorage.getItem("visitCount"));
-    count += 1;
-    localStorage.setItem("visitCount", count);
-    document.getElementById("visit-count").textContent = count;
-  } else {
-    localStorage.setItem("visitCount", 1);
-    document.getElementById("visit-count").textContent = 1;
-  }
-}
+
 
 // Run the function on page load
 updateVisitCount();
