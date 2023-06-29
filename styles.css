@@ -378,12 +378,12 @@ nav {
 }
 
 .about-content > .background{
-  width: 55%;
+  width: 70%;
   height: fit-content;
 }
 
 .about-content > .education{
-  width: 60%;
+  width: 70%;
   height: fit-content;
 }
 
@@ -617,8 +617,9 @@ nav {
   .about-content {
     justify-content: center;
     margin: 0 auto;
-    width: 120%; /* Adjust the width as desired */
-     height: auto;/* Limit the maximum width to prevent overflow */
+    width: auto;
+    height: fit-content; /* Adjust the width as desired */
+    max-width: auto; /* Limit the maximum width to prevent overflow */
   }
 }
 
@@ -960,10 +961,12 @@ nav {
 
   
 footer {
-  background-image: url('img/footer1.jpg');
-  background-size: contain;
+  background-image: url('img/black3.jpg');
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
+  height: fit-content;
   text-align: center;
   padding: 20px;
 }
