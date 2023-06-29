@@ -618,7 +618,7 @@ nav {
     justify-content: center;
     margin: 0 auto;
     width: fit-content; /* Adjust the width as desired */
-     /* Limit the maximum width to prevent overflow */
+     height: auto;/* Limit the maximum width to prevent overflow */
   }
 }
 
