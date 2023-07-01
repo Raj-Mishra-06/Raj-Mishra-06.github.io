@@ -66,7 +66,7 @@ header {
   z-index: 999;
   border-radius: 20px;
   border-style: double;
-  border-color: #14739c;
+  border-color: #ffffff;
   padding: 10px; /* Add padding to create space around the navigation */
   box-sizing: border-box; /* Include padding in the element's total width */
 }
@@ -98,7 +98,7 @@ nav {
 
 .menu li {
   margin: 0 10px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
   position: relative;
 }
@@ -108,14 +108,14 @@ nav {
   font-size: large;
   font-weight: bold;
   color: white; /* Set the text color to white */
-  transition: color 0.3s ease-in-out;
+  transition: color 0.7s ease-in-out;
   white-space: nowrap; /* Prevent navigation items from wrapping to a new line */
   text-decoration: none;
 }
 
 .menu a:hover {
-  background-color: rgba(10, 10, 10, 0.709); /* Change background color on hover */
-  color: rgb(30, 142, 162);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.839) , rgba(0, 0, 0, 0.317));
+  color: rgb(80, 7, 7);
   border-radius: 10px;
   /* Additional styles for the hovered link */
 }
@@ -134,7 +134,7 @@ nav {
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+    transition: transform 0.4s ease-in-out; /* Add transition for smooth animation */
   }
 
   .menu-icon.open {
@@ -147,8 +147,8 @@ nav {
     left: 0;
     right: 0;
     border-radius: 10px;
-    border-style: outset;
-    border-color: #14739c;
+    border-style: groove;
+    border-color: #280505;
     background-color: rgba(0, 0, 0, 0.834);
     padding: 10px;
     display: none;
@@ -847,18 +847,22 @@ nav {
     align-items: center;
   }
 
+
   .slideshow {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
   }
-
+  
   .slideshow > .project-image-hover {
     height: auto;
-    width: 350px;
+    width: 400px;
+    transition: 1s ease-in-out;
   }
 }
+  
+
 
 
 
